@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "typescript-eslint": "^8.0.0-alpha.29"
+  }
+}
