@@ -7,6 +7,7 @@ const mapToObj = <T>(arr: T[], fn: (item: T) => [string, unknown]) =>
 
 console.log(
 	mapToObj(['tsconfig', 'tsconfig.no-dom'], tsconfig => {
+		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/type-utils/tests/TypeOrValueSpecifier.test.ts#L127
 		const { ast, services } = parseForESLint(`type Test = URL;`, {
 			disallowAutomaticSingleRunInference: true,
 			project: `./${tsconfig}.json`,
