@@ -14,32 +14,30 @@ const mapToObj = <T extends string | object>(
 	);
 
 console.log(
-	mapToObj(['tsconfig', 'tsconfig.no-dom'], tsconfig =>
-		mapToObj(['URL', 'URLSearchParams'], type => {
-			const { ast, services } = parseForESLint(`type Test = ${type};`, {
-				disallowAutomaticSingleRunInference: true,
-				project: `./${tsconfig}.json`,
-				filePath: `${import.meta.dirname}/index.ts`
-			});
-			const program = services.program!;
-			return mapToObj(
-				[
-					{ from: 'package', name: 'URL', package: 'node' },
-					{ from: 'lib', name: 'URL' }
-				] as const,
-				specifier =>
-					typeMatchesSpecifier(
-						program
-							.getTypeChecker()
-							.getTypeAtLocation(
-								services.esTreeNodeToTSNodeMap.get(
-									(ast.body.at(-1) as TSESTree.TSTypeAliasDeclaration).id
-								)
-							),
-						specifier,
-						program
-					)
-			);
-		})
-	)
+	mapToObj(['tsconfig', 'tsconfig.no-dom'], tsconfig => {
+		const { ast, services } = parseForESLint(`type Test = URL;`, {
+			disallowAutomaticSingleRunInference: true,
+			project: `./${tsconfig}.json`,
+			filePath: `${import.meta.dirname}/index.ts`
+		});
+		const program = services.program!;
+		return mapToObj(
+			[
+				{ from: 'package', name: 'URL', package: 'node' },
+				{ from: 'lib', name: 'URL' }
+			] as const,
+			specifier =>
+				typeMatchesSpecifier(
+					program
+						.getTypeChecker()
+						.getTypeAtLocation(
+							services.esTreeNodeToTSNodeMap.get(
+								(ast.body.at(-1) as TSESTree.TSTypeAliasDeclaration).id
+							)
+						),
+					specifier,
+					program
+				)
+		);
+	})
 );
