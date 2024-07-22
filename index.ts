@@ -7,6 +7,7 @@ const { ast, services } = parseForESLint('type Test = URL;', {
 	project: './tsconfig.json',
 	filePath: `${import.meta.dirname}/index.ts`
 });
+const { program } = services;
 
 console.log(
 	Object.fromEntries(
@@ -18,16 +19,15 @@ console.log(
 		).map(specifier => [
 			specifier.from,
 			typeMatchesSpecifier(
-				services
-					.program!.getTypeChecker()
+				program
+					.getTypeChecker()
 					.getTypeAtLocation(
 						services.esTreeNodeToTSNodeMap.get(
-							(ast.body[ast.body.length - 1] as TSESTree.TSTypeAliasDeclaration)
-								.id
+							(ast.body.at(-1) as TSESTree.TSTypeAliasDeclaration).id
 						)
 					),
 				specifier,
-				services.program!
+				program
 			)
 		])
 	)
