@@ -1,5 +1,7 @@
 {
 	"compilerOptions": {
-		"module": "nodenext"
+		"module": "nodenext",
+		"strict": true,
+		"lib": ["es2015", "es2017", "esnext"]
 	}
 }

@@ -1,6 +1,5 @@
 import { parseForESLint } from '@typescript-eslint/parser';
 import type { TSESTree } from '@typescript-eslint/types';
-import path from 'path';
 
 import { typeMatchesSpecifier } from '@typescript-eslint/type-utils';
 
