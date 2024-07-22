@@ -4,6 +4,13 @@
     "typescript-eslint": "^8.0.0-alpha.49"
   },
   "devDependencies": {
-    "@types/node": "^20.14.11"
+    "@types/node": "^20.14.11",
+    "prettier": "^3.3.3"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "useTabs": true,
+    "singleQuote": true,
+    "trailingComma": "none"
   }
 }
