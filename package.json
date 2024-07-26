@@ -1,11 +1,8 @@
 {
   "type": "module",
-  "dependencies": {
-    "typescript-eslint": "^8.0.0-alpha.49"
-  },
   "devDependencies": {
-    "@types/node": "^20.14.12",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "typescript-eslint": "^8.0.0-alpha.49"
   },
   "prettier": {
     "arrowParens": "avoid",
