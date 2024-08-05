@@ -1,6 +1,4 @@
-import { TSESLint } from '@typescript-eslint/utils';
-import { FlatCompat } from '@eslint/eslintrc';
+import tseslint from 'typescript-eslint';
+import { fixupConfigRules } from '@eslint/compat';
 
-declare const classicConfig: TSESLint.ClassicConfig.Config;
-
-new FlatCompat().config(classicConfig);
+tseslint.config({ extends: fixupConfigRules([]) });
