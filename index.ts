@@ -1,9 +1,6 @@
-class Console {
-	log(str: unknown) {
-		// ?
-	}
-}
+import { TSESLint } from '@typescript-eslint/utils';
+import { FlatCompat } from '@eslint/eslintrc';
 
-const console = new Console();
+declare const classicConfig: TSESLint.ClassicConfig.Config;
 
-Promise.resolve().then(console.log);
+new FlatCompat().config(classicConfig);
