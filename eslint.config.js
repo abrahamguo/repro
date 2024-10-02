@@ -7,7 +7,7 @@ export default {
 	rules: {
 		'@typescript-eslint/restrict-template-expressions': [
 			'error',
-			{ allow: [{ name: 'Buffer', from: 'package', package: 'node:buffer' }] }
+			{ allow: [{ from: 'package', name: 'Buffer', package: 'node:buffer' }] }
 		]
 	}
 };
