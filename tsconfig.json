@@ -1,7 +1,1 @@
-{
-	"compilerOptions": {
-		"module": "nodenext",
-		"skipLibCheck": true,
-		"strict": true
-	}
-}
+{}
