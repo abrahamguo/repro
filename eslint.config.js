@@ -1,8 +1,9 @@
 export default { rules: { 'no-lonely-if': 'error' } };
 
 if (true)
-	if (false) console.log(5);
-	else {
-		if (false) console.log(8);
+	if (false) {
+	} else {
+		if (false) {
+		}
 	}
-else console.log(11);
+else console.log("This doesn't log. But after running --fix, it does log.");
