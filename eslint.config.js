@@ -1,13 +1,8 @@
-import { plugin, parser } from 'typescript-eslint';
+export default { rules: { 'no-lonely-if': 'error' } };
 
-export default {
-	files: ['*.ts'],
-	languageOptions: { parser, parserOptions: { project: true } },
-	plugins: { '@typescript-eslint': plugin },
-	rules: {
-		'@typescript-eslint/restrict-template-expressions': [
-			'error',
-			{ allow: [{ from: 'package', name: 'Buffer', package: 'node:buffer' }] }
-		]
+if (true)
+	if (false) console.log(5);
+	else {
+		if (false) console.log(8);
 	}
-};
+else console.log(11);
