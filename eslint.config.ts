@@ -12,9 +12,6 @@ tseslint.config(
 				rules: { 'unicorn/filenameCase': [`error`, { case: `pascalCase` }] }
 			}
 		},
-		(files, overrides) =>
-			[overrides]
-				.flat()
-				.map(override => ({ files: files.split(`,`), ...override }))
+		(files, override) => ({ files: files.split(`,`), ...override })
 	).flat()
 );
