@@ -10,6 +10,7 @@ const rules = Object.fromEntries(
 		['error', options]
 	])
 );
+
 export default tseslint.config({
 	plugins: { '@typescript-eslint': tseslint.plugin },
 	rules
