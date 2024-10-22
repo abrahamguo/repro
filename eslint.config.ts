@@ -2,12 +2,15 @@ import tseslint from 'typescript-eslint';
 
 const rules = Object.fromEntries(
 	Object.entries({
-		consistentTypeImports: { prefer: 'no-type-imports' },
-		consistentTypeDefinitions: 'type',
-		noUnusedExpressions: { enforceForJSX: true }
+		'consistent-type-imports': { prefer: 'no-type-imports' },
+		'consistent-type-definitions': 'type',
+		'no-unused-expressions': { enforceForJSX: true }
 	}).map(([ruleName, options]) => [
 		`@typescript-eslint/${ruleName}`,
 		['error', options]
 	])
 );
-export default tseslint.config({ rules });
+export default tseslint.config({
+	plugins: { '@typescript-eslint': tseslint.plugin },
+	rules
+});
