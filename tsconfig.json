@@ -1,1 +1,1 @@
-{ "compilerOptions": { "module": "nodenext", "strict": true } }
+{ "compilerOptions": { "module": "nodenext", "noEmit": true, "strict": true } }
