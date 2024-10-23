@@ -1,8 +1,8 @@
 {
 	"type": "module",
 	"devDependencies": {
-		"prettier": "^3.3.3",
-		"typescript-eslint": "^8.11.0"
+		"eslint-plugin-functional": "^7.1.0",
+		"prettier": "^3.3.3"
 	},
 	"prettier": {
 		"arrowParens": "avoid",
