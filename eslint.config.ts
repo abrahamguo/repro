@@ -7,7 +7,7 @@ const rules = Object.fromEntries(
 		'no-unused-expressions': { enforceForJSX: true }
 	}).map(([ruleName, options]) => [
 		`@typescript-eslint/${ruleName}`,
-		['error', options]
+		['error', options] as const
 	])
 );
 
