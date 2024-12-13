@@ -7,9 +7,8 @@ export default function NodeSwitch(_: NodeSwitchProps) {
   const node = _.node;
   const nodes = _.nodes;
 
-  console.log({ node, nodes });
   if (nodes) {
-    return nodes.map((child, index) => <NodeSwitch key={index} node={node} />);
+    return nodes.map((child, index) => <NodeSwitch key={index} node={child} />);
   }
 
   if (node) {
