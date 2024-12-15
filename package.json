@@ -1,6 +1,7 @@
 {
   "type": "module",
   "devDependencies": {
+    "eslint-plugin-react-compiler": "^19.0.0-beta-37ed2a7-20241206",
     "prettier": "^3.4.2"
   }
 }
