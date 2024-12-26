@@ -1,6 +1,6 @@
 import { ESLint } from "eslint";
 
-new ESLint({ overrideConfig: [] })
+new ESLint({ overrideConfigFile: true, overrideConfig: [] })
   .calculateConfigForFile(import.meta.filename)
   .then(({ rules }) => console.log(rules));
 
