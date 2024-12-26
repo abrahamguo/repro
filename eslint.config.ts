@@ -1,1 +1,1 @@
-import jsonc from "eslint-plugin-jsonc";
+import "eslint-plugin-jsonc";
