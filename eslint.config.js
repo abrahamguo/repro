@@ -1,17 +1,20 @@
-import parser from "svelte-eslint-parser";
-import { config, plugin } from "typescript-eslint";
+import svelteEslintParser from "svelte-eslint-parser";
+import typescriptEslint from "typescript-eslint";
 
-export default config(
+export default typescriptEslint.config(
   {
-    plugins: { "@typescript-eslint": plugin },
+    plugins: { "@typescript-eslint": typescriptEslint.plugin },
     rules: { "@typescript-eslint/no-unsafe-member-access": `error` },
-    languageOptions: { parserOptions: { project: `./tsconfig.json` } },
+    languageOptions: {
+      parser: typescriptEslint.parser,
+      parserOptions: { project: `./tsconfig.json` },
+    },
   },
-  // {
-  //   files: [`*.svelte`],
-  //   languageOptions: {
-  //     parser,
-  //     parserOptions: { parser: `typescript-eslint-parser-for-extra-files` },
-  //   },
-  // },
+  {
+    files: [`*.svelte`],
+    languageOptions: {
+      parser: svelteEslintParser,
+      parserOptions: { parser: `typescript-eslint-parser-for-extra-files` },
+    },
+  },
 );
