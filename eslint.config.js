@@ -1,3 +1,5 @@
+import { execSync } from "node:child_process";
+
 import svelteEslintParser from "svelte-eslint-parser";
 import typescriptEslint from "typescript-eslint";
 
@@ -17,4 +19,12 @@ export default typescriptEslint.config(
       parserOptions: { parser: `typescript-eslint-parser-for-extra-files` },
     },
   },
+);
+
+console.log(
+  `${execSync(`npx tsc --listFilesOnly`)}`
+    .split(`\n`)
+    .filter(Boolean)
+    .map((file) => file.replace(`${import.meta.dirname}/`, ``))
+    .filter((file) => !file.startsWith(`node_modules/`)),
 );

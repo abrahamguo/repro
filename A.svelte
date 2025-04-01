@@ -2,4 +2,5 @@
   import B from "./B.svelte";
 </script>
 
-<B onclick={(event) => event.preventDefault()} />
+<b onblur={(event) => event.preventDefault()}></b>
+<B onblur={(event) => event.preventDefault()} />
