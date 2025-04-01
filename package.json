@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "typescript-eslint-parser-for-extra-files": "^0.7.0"
+  }
+}
