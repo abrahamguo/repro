@@ -1,1 +1,5 @@
-<B />
+<script>
+  import B from "./B.svelte";
+</script>
+
+<B onclick={(event) => event.preventDefault()} />
