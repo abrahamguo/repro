@@ -1,9 +1,1 @@
-{
-  "compilerOptions": {
-    "checkJs": true,
-    "module": "nodenext",
-    "noEmit": true,
-    "strict": true
-  },
-  "include": ["*.js", "*.svelte"]
-}
+{ "compilerOptions": { "module": "nodenext", "noEmit": true, "strict": true } }

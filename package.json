@@ -1,19 +1,7 @@
 {
   "type": "module",
   "devDependencies": {
-    "@types/eslint-scope": "^3.7.7",
-    "@types/node": "^22.13.16",
     "prettier": "^3.5.3",
-    "prettier-plugin-svelte": "^3.3.3",
-    "svelte": "^5.25.5",
-    "svelte-eslint-parser": "^1.1.1",
-    "svelte2tsx": "^0.7.35",
-    "typescript-eslint": "^8.29.0",
-    "typescript-eslint-parser-for-extra-files": "^0.7.0"
-  },
-  "prettier": {
-    "plugins": [
-      "prettier-plugin-svelte"
-    ]
+    "typescript-eslint": "^8.34.0"
   }
 }
