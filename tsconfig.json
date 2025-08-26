@@ -1,1 +1,9 @@
-{ "compilerOptions": { "module": "nodenext", "noEmit": true, "strict": true } }
+{
+  "compilerOptions": {
+    "module": "nodenext",
+    "noEmit": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "strict": true
+  }
+}
