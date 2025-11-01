@@ -1,0 +1,1 @@
+(_: Partial<{ dependencies: unknown }>) => {};
