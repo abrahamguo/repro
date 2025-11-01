@@ -1,1 +1,1 @@
-(_: Partial<{ dependencies: unknown }>) => {};
+(_: Partial<{ 1: 1 }>) => {};
