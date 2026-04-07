@@ -1,1 +1,3 @@
-(_: Partial<{ 1: 1 }>) => {};
+import { defineConfig } from 'eslint/config';
+
+defineConfig();
