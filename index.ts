@@ -1,3 +1,2 @@
-import { defineConfig } from 'eslint/config';
-
-defineConfig();
+import * as configHelpers from '@eslint/config-helpers';
+configHelpers.defineConfig();
