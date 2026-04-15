@@ -1,18 +1,13 @@
 {
 	"type": "module",
 	"devDependencies": {
-		"@tailwindcss/vite": "^4.2.2",
-		"prettier": "^3.8.1",
-		"vite": "^8.0.8"
+		"eslint-plugin-better-tailwindcss": "^4.4.1",
+		"prettier": "^3.8.1"
 	},
 	"prettier": {
 		"arrowParens": "avoid",
 		"useTabs": true,
 		"singleQuote": true,
 		"trailingComma": "none"
-	},
-	"dependencies": {
-		"knip": "^6.3.1",
-		"radix-themes-tw": "^1.1.0"
 	}
 }
