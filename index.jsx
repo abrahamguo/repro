@@ -1,3 +1,19 @@
 console.log(
-	<div className="translate-y-0 opacity-100 transition-all duration-200 ease-out starting:translate-y-1 starting:opacity-0"></div>
+	<div>
+		<div>
+			<div>
+				<div>
+					<div>
+						<div>
+							<div
+								className="
+									translate-y-0 opacity-100 transition-all duration-200 ease-out starting:translate-y-1 starting:opacity-0
+								"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 );
