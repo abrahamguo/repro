@@ -2,6 +2,7 @@
 	"type": "module",
 	"main": "b.js",
 	"devDependencies": {
+		"knip": "^6.7.0",
 		"prettier": "^3.8.3"
 	},
 	"prettier": {
@@ -9,8 +10,5 @@
 		"useTabs": true,
 		"singleQuote": true,
 		"trailingComma": "none"
-	},
-	"dependencies": {
-		"knip": "^6.7.0"
 	}
 }
