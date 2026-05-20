@@ -1,2 +1,2 @@
-export type RefInsideExportedValue = 0;
-export const wrapperValue: RefInsideExportedValue = 0;
+export type A = 0;
+export const b: A = 0;
