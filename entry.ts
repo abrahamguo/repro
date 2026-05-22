@@ -1,1 +1,1 @@
-import { b } from './lib.ts';
+import { f } from './lib.ts';

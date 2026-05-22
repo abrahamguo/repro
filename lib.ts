@@ -1,2 +1,4 @@
-export type A = 0;
-export const b: A = 0;
+export type T = 0;
+export const f = () => {
+	let _: T;
+};
