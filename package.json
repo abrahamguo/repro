@@ -1,0 +1,6 @@
+{
+	"type": "module",
+	"devDependencies": {
+		"knip": "^6.41.0"
+	}
+}
